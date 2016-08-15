@@ -1,4 +1,5 @@
-// Problem: 2d array, filled with "land" and "water". Find biggest island.
+// Problem: There is a "map" (2d array) filled with "land" and "water".
+//Find the biggest island.
 
 function biggestIsland(arr) {
 	var biggest = 0;
@@ -38,3 +39,7 @@ var map = [['L', 'L', 'L', 'W', 'W', 'W', 'W', 'W', 'W', 'L', 'L'],
 		   ['L', 'W', 'W', 'W', 'W', 'L', 'W', 'W', 'L', 'L', 'L']];
 biggestIsland(map);
 // result should be 8
+
+// Solution: Iterate through each of the cells of the 2D array. If the cell is a 'land' cell,
+// recursively find the size of the island using BFS. When a cell is visited, mark it as such
+// so as to not get a falsely inflated island size and to reduce algorithm time.
